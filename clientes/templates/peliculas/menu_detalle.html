@@ -1,0 +1,12 @@
+{% extends 'peliculas/base.html' %}
+
+    {% block content %}
+  <div class="post">
+    <a class="btn btn-danger" href= "{% url 'menu_editar' pk=menu.pk %}"><span class="glyphicon-pencil"></span></a>
+  <a class="btn btn-danger" href= "{% url 'menu_remove' pk=menu.pk %}"><span class="glyphicon-remove"></span></a>
+    <p>Nombre: {{ menu.nombre }}</p>
+      <p>TipoProducto: {{ menu.tipoproducto|linebreaksbr }}</p>
+      <p>Descripcion: {{ menu.descripcion|linebreaksbr }}</p>
+      <p>Precio: {{ orden.direccion|linebreaksbr }}</p>
+  </div>
+    {% endblock %}

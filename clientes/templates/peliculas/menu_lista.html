@@ -1,0 +1,15 @@
+{% extends 'peliculas/base.html' %}
+
+    {% block content %}
+    <div>
+  <h1><a href="/">Menus</a></h1>
+</div>
+{% for menu in menus %}
+  <div>
+      <h1><a href = "{% url 'menu_detalle' pk=menu.pk %}">Nombre: {{ menu.nombre }}</a></h1>
+      <p>Tipo Producto: {{ orden.tipoproducto|linebreaksbr }}</p>
+      <p>Descripcion: {{ orden.descripcion|linebreaksbr }}</p>
+      <p>Precio: {{ orden.precio|linebreaksbr }}</p>
+  </div>
+{% endfor %}
+    {% endblock %}

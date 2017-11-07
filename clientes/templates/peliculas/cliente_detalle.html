@@ -1,0 +1,13 @@
+{% extends 'peliculas/base.html' %}
+
+    {% block content %}
+  <div class="post">
+    <a class="btn btn-danger" href= "{% url 'cliente_editar' pk=orden.pk %}"><span class="glyphicon-pencil"></span></a>
+  <a class="btn btn-danger" href= "{% url 'cliente_remove' pk=orden.pk %}"><span class="glyphicon-remove"></span></a>
+    <p>Nombre: {{ orden.nombre_orden }}</p>
+      <p>Fecha de la orden: {{ orden.fecha_orden|linebreaksbr }}</p>
+      <p>Edad: {{ orden.edad|linebreaksbr }}</p>
+      <p>Direccion: {{ orden.direccion|linebreaksbr }}</p>
+      <p>Nit: {{ orden.nit|linebreaksbr }}</p>
+  </div>
+    {% endblock %}
