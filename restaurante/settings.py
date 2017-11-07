@@ -25,7 +25,7 @@ SECRET_KEY = '+fj^gi7gudvgd9^)5nrk$da@tx^tsuow#$$i1jf8iu2u2qj@=-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 LOGIN_REDIRECT_URL = 'login/'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gelder.pythonanywhere.com']
 
 
 # Application definition
