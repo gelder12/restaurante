@@ -2,11 +2,11 @@
 
     {% block content %}
     <div>
-  <h1><a href="/">Pedidos</a></h1>
+  <h3 align="right" class="top-menu"><a href="clienten/">Nuevo Cliente</a></h3>
 </div>
 {% for orden in ordens %}
   <div>
-      <h1><a href = "{% url 'cliente_detalle' pk=orden.pk %}">Nombre: {{ orden.nombre }}</a></h1>
+      <h3><a href = "{% url 'cliente_detalle' pk=orden.pk %}">Nombre: {{ orden.nombre }}</a></h3>
       <p>Fecha de la orden: {{ orden.fecha_orden }}</p>
   </div>
 {% endfor %}

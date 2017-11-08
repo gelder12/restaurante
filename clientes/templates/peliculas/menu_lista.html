@@ -2,14 +2,12 @@
 
     {% block content %}
     <div>
-  <h1><a href="/">Menus</a></h1>
+  <h3 align="right"><a href="{% url 'menu_nuevo' %}">Nuevo Menu</a></h3>
 </div>
 {% for menu in menus %}
   <div>
-      <h1><a href = "{% url 'menu_detalle' pk=menu.pk %}">Nombre: {{ menu.nombre }}</a></h1>
-      <p>Tipo Producto: {{ orden.tipoproducto|linebreaksbr }}</p>
-      <p>Descripcion: {{ orden.descripcion|linebreaksbr }}</p>
-      <p>Precio: {{ orden.precio|linebreaksbr }}</p>
+      <h3><a href = "{% url 'menu_detalle' pk=menu.pk %}">Nombre: {{ menu.nombre }}<a></h3>
+      <p>Tipo Producto: {{ menu.tipoproducto|linebreaksbr }}</p>
   </div>
 {% endfor %}
     {% endblock %}

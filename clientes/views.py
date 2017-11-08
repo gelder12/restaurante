@@ -17,9 +17,10 @@ def cliente_nuevo(request):
             fecha_orden = formulario.cleaned_data['fecha_orden'],edad = formulario.cleaned_data['edad'],
             direccion = formulario.cleaned_data['direccion'],nit = formulario.cleaned_data['nit'])
             for menu_id in request.POST.getlist('clientes'):
-                orden = Orden(menu_id=menu_id, orden_id = orden.id)
+                orden = Orden(menu_id=menu_id, orden_id=orden.id)
                 orden.save()
-            messages.add_message(request, messages.SUCCESS, 'Cliente Guardada Exitosamente')
+                return redirect('cliente_list')
+                messages.add_message(request, messages.SUCCESS, 'Cliente Guardada Exitosamente')
     else:
         formulario = ClienteForm()
     return render(request, 'peliculas/pelicula_editar.html', {'formulario': formulario})
@@ -83,7 +84,7 @@ def menu_nuevo(request):
     if request.method == "POST":
         form = MenuForm(request.POST)
         if form.is_valid():
-            menu = formu.save(commit=False)
+            menu = form.save(commit=False)
             menu.save()
             return redirect('menu_list')
     else:

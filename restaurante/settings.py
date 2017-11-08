@@ -25,7 +25,7 @@ SECRET_KEY = '+fj^gi7gudvgd9^)5nrk$da@tx^tsuow#$$i1jf8iu2u2qj@=-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 LOGIN_REDIRECT_URL = 'login/'
-ALLOWED_HOSTS = ['gelder.pythonanywhere.com']
+ALLOWED_HOSTS = ['gelder.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'clientes',
+    'bootstrapform',
 ]
 
 MIDDLEWARE = [
